@@ -31,7 +31,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.textPrice = new System.Windows.Forms.TextBox();
             this.textBrand = new System.Windows.Forms.TextBox();
             this.textCategory = new System.Windows.Forms.TextBox();
@@ -67,7 +66,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(263, 322);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(159, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,22 +74,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(344, 322);
+            this.button3.Location = new System.Drawing.Point(428, 322);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(165, 23);
             this.button3.TabIndex = 3;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(425, 322);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Show Receipt";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // textPrice
             // 
@@ -259,7 +249,6 @@
             this.Controls.Add(this.textCategory);
             this.Controls.Add(this.textBrand);
             this.Controls.Add(this.textPrice);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -276,7 +265,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textPrice;
         private System.Windows.Forms.TextBox textBrand;
         private System.Windows.Forms.TextBox textCategory;
