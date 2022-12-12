@@ -7,7 +7,7 @@ namespace ImportInvoice
 {
     public partial class New : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=PTB;Initial Catalog=Shop;Integrated Security=SSPI;");
+        SqlConnection con = new SqlConnection("Data Source=CHOCO;Initial Catalog=Shop;Integrated Security=SSPI;");
         SqlCommand cmd;
         SqlDataAdapter adapt;
         int PID = 0;
@@ -61,7 +61,18 @@ namespace ImportInvoice
                 Con.Close();
                 MessageBox.Show("Record Inserted Successfully");
                 DisplayData();
-                //ClearData();
+                this.Hide();
+                Receipt re = new Receipt();
+                re.Proid.Text = this.textPid.Text;
+                re.Proname.Text = this.textPname.Text;
+                re.Br.Text = this.textBrand.Text;
+                re.Pr.Text = this.textPrice.Text;
+                re.Quan.Text = this.textQuantity.Text;
+                re.Cat.Text = this.textCategory.Text;
+                re.Des.Text = this.textDescription.Text;
+                re.Sup.Text = this.textSid.Text;
+                re.ShowDialog();
+                re.Close();
             }
             else
             {
@@ -102,22 +113,6 @@ namespace ImportInvoice
             textSid.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             textRol.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             textPid.Focus();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Receipt re = new Receipt();
-            re.Proid.Text = this.textPid.Text;
-            re.Proname.Text = this.textPname.Text;
-            re.Br.Text = this.textBrand.Text;
-            re.Pr.Text = this.textPrice.Text;
-            re.Quan.Text = this.textQuantity.Text;
-            re.Cat.Text = this.textCategory.Text;
-            re.Des.Text = this.textDescription.Text;
-            re.Sup.Text = this.textSid.Text;
-            re.ShowDialog();
-            re.Close();
         }
     }
 }
