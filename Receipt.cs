@@ -8,5 +8,10 @@ namespace ImportInvoice
         {
             InitializeComponent();
         }
+
+        private void invoicePanel_Enter(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
